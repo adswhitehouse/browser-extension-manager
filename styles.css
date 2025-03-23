@@ -59,3 +59,132 @@ textarea:not([rows]) {
 :target {
   scroll-margin-block: 5ex;
 }
+
+/* Variables */
+:root {
+  /* Font */
+  --ff-primary: "Noto Sans", sans-serif;
+
+  /* Colors */
+  --neutral-1: #091540;
+  --neutral-2: #202535;
+  --neutral-3: #2f364b;
+  --neutral-4: #535868;
+  --neutral-5: #c6c6c6;
+  --neutral-6: #d6e2f5;
+  --neutral-7: #eee;
+  --neutral-8: #fbfdfe;
+  --red-1: #c7231a;
+  --red-2: #de4840;
+  --red-3: #f25c54;
+  --gradient-light: linear-gradient(180deg, #ebf2fc 0%, #eefbf9 100%);
+  --gradient-dark: linear-gradient(180deg, #04091b 0%, #091540 100%);
+
+  --extension-1: #bfd8bd;
+  --extension-2: #a9d6e5;
+  --extension-3: #ffcfd2;
+  --extension-4: #f1c0e8;
+  --extension-5: #cfbaf0;
+  --extension-6: #a3c4f3;
+  --extension-7: #90dbf4;
+  --extension-8: #b8b8ff;
+  --extension-9: #98f5e1;
+  --extension-10: #ffd8be;
+  --extension-11: #8eecf5;
+  --extension-12: #b9fbc0;
+
+  /* Font Sizes */
+  --fs-1: 2.125rem;
+  --fs-2: 1.25rem;
+  --fs-3: 1rem;
+
+  /* Font Weights */
+  --fw-1: 700;
+  --fw-2: 500;
+  --fw-3: 400;
+
+  /* Line Heights */
+  --lh-1: 140%;
+  --lh-2: 120%;
+  --lh-3: 100%;
+
+  /* Letter Spacing */
+  --ls-1: -1px;
+  --ls-2: -0.5px;
+  --ls-3: -0.3px;
+  --ls-4: -0.2px;
+}
+
+/* Utility Classes */
+/* Colors */
+.neutral-1 {
+  color: var(--neutral-1);
+}
+
+.neutral-4 {
+  color: var(--neutral-4);
+}
+
+/* Background Colors */
+.light-bg {
+  background-color: var(--gradient-light);
+}
+
+.neutral-5-bg {
+  background-color: var(--neutral-5);
+}
+
+.neutral-7-bg {
+  background-color: var(--neutral-7);
+}
+
+.neutral-8-bg {
+  background-color: var(--neutral-8);
+}
+
+.red-1-bg {
+  background-color: var(--red-1);
+}
+
+/* Text Presets */
+.tp-1 {
+  font-size: var(--fs-1);
+  font-weight: var(--fw-1);
+  line-height: var(--lh-3);
+  letter-spacing: var(--ls-1);
+}
+
+.tp-2 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-1);
+  line-height: var(--lh-2);
+  letter-spacing: var(--ls-4);
+}
+
+.tp-3 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-3);
+  line-height: var(--lh-1);
+  letter-spacing: var(--ls-3);
+}
+
+.tp-4 {
+  font-size: var(--fs-2);
+  font-weight: var(--fw-2);
+  line-height: var(--lh-1);
+  letter-spacing: var(--ls-3);
+}
+
+.tp-5 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-3);
+  line-height: var(--lh-1);
+  letter-spacing: var(--ls-2);
+}
+
+.tp-6 {
+  font-size: var(--fs-3);
+  font-weight: var(--fw-2);
+  line-height: var(--lh-1);
+  letter-spacing: var(--ls-2);
+}
