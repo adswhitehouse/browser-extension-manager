@@ -267,6 +267,13 @@ header button {
   border-radius: 100rem;
   border: 2px solid var(--neutral-5);
   cursor: pointer;
+  transition: background-color 0.25s, color 0.25s, border 0.25s;
+}
+
+.remove-btn:hover {
+  background-color: var(--red-1);
+  color: var(--neutral-8);
+  border: 2px solid var(--red-1);
 }
 
 .active-btn {
@@ -276,6 +283,11 @@ header button {
   border: none;
   position: relative;
   cursor: pointer;
+  transition: background-color 0.25s;
+}
+
+.active-btn-red:hover {
+  background-color: var(--red-2);
 }
 
 .active-btn::after {
@@ -288,6 +300,15 @@ header button {
   top: 50%;
   transform: translateY(-50%);
   right: 1px;
+  transition: right 0.25s;
+}
+
+.active-btn-toggle {
+  background-color: var(--neutral-5);
+}
+
+.active-btn-toggle::after {
+  right: 16.5px;
 }
 
 /* Media Queries */
