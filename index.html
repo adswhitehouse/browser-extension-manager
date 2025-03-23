@@ -12,16 +12,264 @@
       href="https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap"
       rel="stylesheet"
     />
-    <!-- Font Awesome -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css"
-      integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
   </head>
-  <body>
+  <body class="ff-primary light-bg">
+    <!-- Header -->
+    <header class="neutral-8-bg">
+      <img src="./images/logo.svg" alt="Extensions logo" />
+      <button class="neutral-7-bg" aria-label="Toggles light and dark mode">
+        <img src="./images/icon-moon.svg" alt="" aria-hidden="true" />
+      </button>
+    </header>
+    <!-- Main -->
+    <main>
+      <!-- Heading -->
+      <section class="heading">
+        <h1 class="tp-1 neutral-1">Extensions List</h1>
+        <div class="filters">
+          <button class="tp-3 neutral-1 neutral-8-bg">All</button>
+          <button class="tp-3 neutral-1 neutral-8-bg">Active</button>
+          <button class="tp-3 neutral-1 neutral-8-bg">Inactive</button>
+        </div>
+      </section>
+      <!-- Extensions -->
+      <section class="extensions">
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img src="./images/logo-devlens.svg" alt="" aria-hidden="true" />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">DevLens</h2>
+              <p class="tp-5 neutral-4">
+                Quickly inspect page layouts and visualize element boundaries.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img src="./images/logo-style-spy.svg" alt="" aria-hidden="true" />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">StyleSpy</h2>
+              <p class="tp-5 neutral-4">
+                Instantly analyze and copy CSS from any webpage element.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-speed-boost.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">SpeedBoost</h2>
+              <p class="tp-5 neutral-4">
+                Optimizes browser resource usage to accelerate page loading.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-grid-guides.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">GridGuides</h2>
+              <p class="tp-5 neutral-4">
+                Overlay customizable grids and alignment guides on any webpage.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-json-wizard.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">JSONWizard</h2>
+              <p class="tp-5 neutral-4">
+                Formats, validates, and prettifies JSON responses in-browser.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-tab-master-pro.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">TabMaster Pro</h2>
+              <p class="tp-5 neutral-4">
+                Organizes browser tabs into groups and sessions.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-viewport-buddy.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">ViewportBuddy</h2>
+              <p class="tp-5 neutral-4">
+                Simulates various screen resolutions directly within the
+                browser.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-markup-notes.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">Markup Notes</h2>
+              <p class="tp-5 neutral-4">
+                Enables annotation and notes directly onto webpages for
+                collaborative debugging.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-palette-picker.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">Palette Picker</h2>
+              <p class="tp-5 neutral-4">
+                Instantly extracts color palettes from any webpage.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-link-checker.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">LinkChecker</h2>
+              <p class="tp-5 neutral-4">
+                Scans and highlights broken links on any page.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-dom-snapshot.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">DOM Snapshot</h2>
+              <p class="tp-5 neutral-4">
+                Capture and export DOM structures quickly.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+        <!-- Extension -->
+        <div class="extension neutral-8-bg">
+          <div class="info">
+            <img
+              src="./images/logo-console-plus.svg"
+              alt=""
+              aria-hidden="true"
+            />
+            <div class="text">
+              <h2 class="tp-2 neutral-1">ConsolePlus</h2>
+              <p class="tp-5 neutral-4">
+                Enhanced developer console with advanced filtering and logging.
+              </p>
+            </div>
+          </div>
+          <div class="actions">
+            <button class="tp-6 neutral-1 remove-btn">Remove</button>
+            <button class="active-btn red-1-bg"></button>
+          </div>
+        </div>
+      </section>
+    </main>
     <!-- JS -->
     <script src="./script.js"></script>
   </body>
