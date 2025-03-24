@@ -193,6 +193,8 @@ header {
   padding: 0.75rem 1rem;
   border-radius: 1.25rem;
   box-shadow: 0 2px 3px #d9e5f4;
+  align-items: center;
+  border: 1px solid var(--neutral-6);
 }
 
 .theme {
@@ -236,17 +238,17 @@ header {
   background-color: var(--red-1);
   color: var(--neutral-8);
   transition: background-color 0.25s, border 0.25s;
-  border: 2px solid var(--red-1);
+  border: 1px solid var(--red-1);
 }
 
 .active-filter:hover {
   background-color: var(--red-2);
-  border: 2px solid var(--red-2);
+  border: 1px solid var(--red-2);
 }
 
 .inactive-filter {
   transition: color 0.25s;
-  border: 2px solid var(--neutral-6);
+  border: 1px solid var(--neutral-6);
 }
 
 .inactive-filter:hover {
@@ -269,6 +271,7 @@ header {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  border: 1px solid var(--neutral-6);
 }
 
 .info {
@@ -292,7 +295,7 @@ header {
   background-color: transparent;
   padding: 0.5rem 1rem;
   border-radius: 100rem;
-  border: 2px solid var(--neutral-5);
+  border: 1px solid var(--neutral-5);
   cursor: pointer;
   transition: background-color 0.25s, color 0.25s, border 0.25s;
 }
@@ -300,7 +303,7 @@ header {
 .remove-btn:hover {
   background-color: var(--red-1);
   color: var(--neutral-8);
-  border: 2px solid var(--red-1);
+  border: 1px solid var(--red-1);
 }
 
 .active-btn {
@@ -315,7 +318,7 @@ header {
 
 button:focus-visible {
   outline: none;
-  outline: 2px solid var(--red-3);
+  outline: 1px solid var(--red-3);
   outline-offset: 2px;
 }
 

@@ -4,7 +4,9 @@ const active = document.querySelector(".jsActive");
 const inactive = document.querySelector(".jsInactive");
 const extensionsList = document.querySelector(".jsExtensions");
 const filters = document.querySelectorAll(".jsFilter");
-const theme = document.querySelector(".jsTheme")
+const theme = document.querySelector(".jsTheme");
+const logo = document.querySelector(".jsLogo");
+const sunMoon = document.querySelector(".jsSunMoon");
 
 let extensions = [
   {
@@ -198,3 +200,60 @@ inactive.addEventListener("click", () => {
 });
 
 // Light/dark mode
+let isToggled = false;
+let root = document.documentElement;
+// Inactive button element styling
+const style = document.createElement("style");
+style.innerHTML = `
+.inactive-filter {
+transition: background-color 0.25s !important;
+}
+
+.inactive-filter:hover {
+background-color: #535868 !important;
+color: #fbfdfe !important;
+}
+`;
+theme.addEventListener("click", () => {
+  if (!isToggled) {
+    isToggled = true;
+    // Change root variable properties
+    root.style.setProperty(
+      "--gradient-light",
+      "linear-gradient(180deg, #04091b 0%, #091540 100%)"
+    );
+    root.style.setProperty("--neutral-8", "#202535");
+    root.style.setProperty("--neutral-1", "#fbfdfe");
+    root.style.setProperty("--neutral-4", "#c6c6c6");
+    root.style.setProperty("--red-1", "#f25c54");
+    root.style.setProperty("--neutral-7", "#2f364b");
+    root.style.setProperty("--neutral-5", "#535868");
+    root.style.setProperty("--neutral-6", "#535868");
+
+    // Change images
+    logo.src = "./images/logo-white.png";
+    sunMoon.src = "./images/icon-sun.svg";
+
+    document.head.appendChild(style);
+  } else {
+    isToggled = false;
+    root.style.setProperty(
+      "--gradient-light",
+      "linear-gradient(180deg, #ebf2fc 0%, #eefbf9 100%)"
+    );
+    root.style.setProperty("--neutral-8", "#fbfdfe");
+    root.style.setProperty("--neutral-1", "#091540");
+    root.style.setProperty("--neutral-4", "#535868");
+    logo.src = "./images/logo.svg";
+    root.style.setProperty("--red-1", "#c7231a");
+    root.style.setProperty("--neutral-7", "#eee");
+    root.style.setProperty("--neutral-5", "#c6c6c6");
+    sunMoon.src = "./images/icon-moon.svg";
+    root.style.setProperty("--neutral-6", "#d6e2f5");
+
+    logo.src = "./images/logo.svg";
+    sunMoon.src = "./images/icon-moon.svg";
+
+    style.remove();
+  }
+});
