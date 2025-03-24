@@ -195,7 +195,7 @@ header {
   box-shadow: 0 2px 3px #d9e5f4;
 }
 
-header button {
+.theme {
   width: 3.125rem;
   height: 3.125rem;
   display: flex;
@@ -204,6 +204,11 @@ header button {
   border-radius: 0.75rem;
   cursor: pointer;
   border: none;
+  transition: background-color 0.25s;
+}
+
+.theme:hover {
+  background-color: var(--neutral-5);
 }
 
 /* Heading */
@@ -231,20 +236,21 @@ header button {
   background-color: var(--red-1);
   color: var(--neutral-8);
   transition: background-color 0.25s, border 0.25s;
-  border: 1px solid var(--red-1);
+  border: 2px solid var(--red-1);
 }
 
 .active-filter:hover {
   background-color: var(--red-2);
-  border: 1px solid var(--red-2);
+  border: 2px solid var(--red-2);
 }
 
 .inactive-filter {
-    transition: color 0.25s;
+  transition: color 0.25s;
+  border: 2px solid var(--neutral-6);
 }
 
 .inactive-filter:hover {
-    color: var(--neutral-4);
+  color: var(--neutral-4);
 }
 
 /* Extensions Container */
@@ -305,6 +311,12 @@ header button {
   position: relative;
   cursor: pointer;
   transition: background-color 0.25s;
+}
+
+button:focus-visible {
+  outline: none;
+  outline: 2px solid var(--red-3);
+  outline-offset: 2px;
 }
 
 .active-btn-red:hover {

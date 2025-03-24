@@ -4,6 +4,7 @@ const active = document.querySelector(".jsActive");
 const inactive = document.querySelector(".jsInactive");
 const extensionsList = document.querySelector(".jsExtensions");
 const filters = document.querySelectorAll(".jsFilter");
+const theme = document.querySelector(".jsTheme")
 
 let extensions = [
   {
@@ -195,3 +196,5 @@ inactive.addEventListener("click", () => {
     }
   });
 });
+
+// Light/dark mode
