@@ -3,6 +3,7 @@ const all = document.querySelector(".jsAll");
 const active = document.querySelector(".jsActive");
 const inactive = document.querySelector(".jsInactive");
 const extensionsList = document.querySelector(".jsExtensions");
+const filters = document.querySelectorAll(".jsFilter");
 
 let extensions = [
   {
@@ -81,7 +82,7 @@ function createExtensionList() {
     let removeBtn = document.createElement("button");
     let activeBtn = document.createElement("button");
 
-    // Add classes
+    // Add classes/attributes
     extension.classList.add("extension", "neutral-8-bg");
     info.classList.add("info");
     img.setAttribute("aria-hidden", "true");
@@ -90,8 +91,14 @@ function createExtensionList() {
     paragraph.classList.add("tp-5", "neutral-4");
     actions.classList.add("actions");
     removeBtn.classList.add("tp-6", "neutral-1", "remove-btn");
-    activeBtn.classList.add("active-btn", "red-1-bg", "jsActiveBtn");
+    activeBtn.classList.add(
+      "active-btn",
+      "red-1-bg",
+      "active-btn-red",
+      "jsActiveBtn"
+    );
 
+    // Add content
     img.src = `${item.img}`;
     h2.textContent = `${item.name}`;
     paragraph.textContent = `${item.text}`;
@@ -109,6 +116,7 @@ function createExtensionList() {
     // Toggles extension active/inactive
     activeBtn.addEventListener("click", () => {
       activeBtn.classList.toggle("active-btn-toggle");
+      activeBtn.classList.toggle("active-btn-red");
     });
 
     // Removes extension
@@ -116,23 +124,46 @@ function createExtensionList() {
       removeBtn.parentElement.parentElement.remove();
     });
   });
+
+  // Sets "All" to active by default
+  all.classList.add("active-filter");
+  active.classList.add("inactive-filter");
+  inactive.classList.add("inactive-filter");
 }
 
 // Load extension list on load
 createExtensionList();
 
-// Displays all extensions
-all.addEventListener("click", () => {
-  activeBtns.forEach((btn) => {
-    btn.parentElement.parentElement.style.display = "flex";
-  });
-});
-
 // Active toggle buttons
 const activeBtns = document.querySelectorAll(".jsActiveBtn");
 
+// Displays all extensions
+all.addEventListener("click", () => {
+  filters.forEach((filter) => {
+    filter.classList.remove("active-filter");
+    filter.classList.add("inactive-filter");
+  });
+  all.classList.add("active-filter");
+  all.classList.remove("inactive-filter");
+  activeBtns.forEach((btn) => {
+    btn.parentElement.parentElement.style.display = "flex";
+    let bgColor = getComputedStyle(btn).getPropertyValue("background-color");
+    if (bgColor === "rgb(199, 35, 26)") {
+      btn.classList.add("active-btn-red");
+    } else {
+      btn.classList.remove("active-btn-red");
+    }
+  });
+});
+
 // Display only active extensions
 active.addEventListener("click", () => {
+  filters.forEach((filter) => {
+    filter.classList.remove("active-filter");
+    filter.classList.add("inactive-filter");
+  });
+  active.classList.add("active-filter");
+  active.classList.remove("inactive-filter");
   activeBtns.forEach((btn) => {
     btn.parentElement.parentElement.style.display = "flex";
   });
@@ -141,12 +172,20 @@ active.addEventListener("click", () => {
     if (bgColor !== "rgb(199, 35, 26)") {
       btn.parentElement.parentElement.style.display = "none";
     }
+    btn.classList.add("active-btn-red");
   });
 });
 
 // Display only inactive extensions
 inactive.addEventListener("click", () => {
+  filters.forEach((filter) => {
+    filter.classList.remove("active-filter");
+    filter.classList.add("inactive-filter");
+  });
+  inactive.classList.add("active-filter");
+  inactive.classList.remove("inactive-filter");
   activeBtns.forEach((btn) => {
+    btn.classList.remove("active-btn-red");
     btn.parentElement.parentElement.style.display = "flex";
   });
   activeBtns.forEach((btn) => {
